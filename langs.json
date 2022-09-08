@@ -1,0 +1,41 @@
+{
+    "languages": [
+        {
+            "name": "Python",
+            "questions" : [
+                "This Language is older than Java.", 
+                "It has a while-else-clause.", 
+                "This language started out as a hobby project to keep the creator bussy around cristmas.",
+                "This language was designed to be a scuccessor to the ABC-language."
+            ]    
+        },
+        {
+            "name": "C",
+            "questions":[
+                "This language is the most used in the world.",
+                "Many operating Systems are written in this language.",
+                "This language initaly was supposed to be called NB.",
+                "For ruffly 10 years, this language was not standardised. "
+            ]
+        },
+        {
+            "name":"Java",
+            "questions":[
+                "This language was created by Sun Microsystems.",
+                "This language is in the top 3 of most popular languages.",
+                "The typical \"Hello World\" programm takes more than 90 letters."
+            ]
+        },
+        {
+            "name":"HolyC",
+            "questions":[
+                "This languages designer was schizophrenic.",
+                "This language forces floats to always be the max size of 64Bits",
+                "This langauge is an improved version of C. Featuring e.g. default args at any position.",
+                "In this language, a simple string written in the code without anything else, will automaticaly get printed. E.G. \"HI\"=Print(\"HI\"). ",
+                "This language was used to programm an biblical-themed OS, because the maker thought he got a revelation from god."
+            ]
+        }
+        
+    ]
+}
