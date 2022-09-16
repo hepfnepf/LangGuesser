@@ -10,7 +10,8 @@ answerSubmitBtn.addEventListener("click", _on_Submit);
 const TIME_PER_QUESTION = 6;
 
 var score = 0;
-var q_count = 5;
+var lang_count = 3;//How many lanugages until games is done
+var q_count = 5;//Max. amount of questions asked per language
 var curr_q_count = 5;
 var timer = setInterval(timeTick, 1000);
 var sec_left = TIME_PER_QUESTION;
@@ -20,13 +21,17 @@ function _on_Submit(event) {
     if (!ready) {
         return;
     }
-    if (answerField.value.toUpperCase() == current_lang.name.toUpperCase()) {
+    if (validLanguage(answerField.value,current_lang)) {
         validationField.innerText = "Correct";
         nextLanguage();
         setScore(score + 1 + curr_q_count);
     } else {
         validationField.innerText = "Wrong";
     }
+}
+
+function validLanguage(answer, language){
+    return ((answer.toUpperCase() == language.name.toUpperCase()) || (language.aliases.map(str => str.toUpperCase()).includes(answer.toUpperCase()) )  );
 }
 
 answerField.addEventListener("keyup", (event)=>{
@@ -41,8 +46,9 @@ function setScore(new_score) {
     scoreField.innerText = score;
 }
 
-function Lang(name, questions) {
+function Lang(name, questions, alias=[]) {
     this.name = name;
+    this.aliases = alias
     this.questions = questions;
     this.addQuestion = (q) => {
         this.questions.push(q);
@@ -78,7 +84,7 @@ var current_question;
 function initialize(langJSON) {
 
     for (l of langJSON.languages) {
-        languages.push(new Lang(l.name, l.questions));
+        languages.push(new Lang(l.name, l.questions, l.alias));
     }
     ready = true;
     console.log(languages);
@@ -89,8 +95,9 @@ function initialize(langJSON) {
 
 function nextLanguage(first = false) {
     if (!first) {
-        languages.pop(current_lang);
-        if (languages.length == 0) {
+        lang_count--;
+        languages.splice(languages.indexOf(current_lang),1);
+        if (languages.length == 0 || lang_count<= 0) {
             completed();
             return;
         }

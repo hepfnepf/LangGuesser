@@ -2,6 +2,7 @@
     "languages": [
         {
             "name": "Python",
+            "alias":[],
             "questions" : [
                 "This Language is older than Java.", 
                 "It has a while-else-clause.", 
@@ -11,6 +12,7 @@
         },
         {
             "name": "C",
+            "alias":[],
             "questions":[
                 "This language is the most used in the world.",
                 "Many operating Systems are written in this language.",
@@ -20,6 +22,7 @@
         },
         {
             "name":"Java",
+            "alias":[],
             "questions":[
                 "This language was created by Sun Microsystems.",
                 "This language is in the top 3 of most popular languages.",
@@ -28,6 +31,7 @@
         },
         {
             "name":"HolyC",
+            "alias":[],
             "questions":[
                 "This languages designer was schizophrenic.",
                 "This language forces floats to always be the max size of 64Bits",
@@ -37,7 +41,8 @@
             ]
         },
         {
-            "name":"Assembly language",
+            "name":"Assembly",
+            "alias":["ASM", "Assembler"],
             "questions":[
                 "This languages differs based on the used hardware.",
                 "This language first appeared in 1947.",
@@ -48,6 +53,7 @@
         },
         {
             "name":"SQL",
+            "alias":[],
             "questions":[
                 "This language is one of the most popular declarative languages.",
                 "Keywords usally written in all capital letters, despite it not being necessary. ",
@@ -58,12 +64,13 @@
         },
         {
             "name":"Haskell",
+            "alias":[],
             "questions":[
                 "This language is purely functional.",
                 "In this language there is no operation to change a variables value.",
                 "This language is based on lambda-calculus.",
                 "In this language, only the parts of code needed for a resulted will be excecuted.",
-                "Despite this language bein place 28 for tutorial-searches less than 1% of active users on GitHub are using it."
+                "Despite this language being place 28 for tutorial-searches less than 1% of active users on GitHub are using it."
 
             ]
         }
