@@ -35,6 +35,37 @@
                 "In this language, a simple string written in the code without anything else, will automaticaly get printed. E.G. \"HI\"=Print(\"HI\"). ",
                 "This language was used to programm an biblical-themed OS, because the maker thought he got a revelation from god."
             ]
+        },
+        {
+            "name":"Assembly language",
+            "questions":[
+                "This languages differs based on the used hardware.",
+                "This language first appeared in 1947.",
+                "This language is nowdays only used for extreme low level or speed purposes.",
+                "A typical hello world programm needs 20 lines witch more than 300 letters.",
+                "Insutractions are usally written in all capital letters, despite it not being necessary."
+            ]
+        },
+        {
+            "name":"SQL",
+            "questions":[
+                "This language is one of the most popular declarative languages.",
+                "Keywords usally written in all capital letters, despite it not being necessary. ",
+                "This language was named SEQUEL but had to be renamed, due to trademark issues.",
+                "This language was created to remove mathematical notation from a diffrent language to make i easier to type."
+
+            ]
+        },
+        {
+            "name":"Haskell",
+            "questions":[
+                "This language is purely functional.",
+                "In this language there is no operation to change a variables value.",
+                "This language is based on lambda-calculus.",
+                "In this language, only the parts of code needed for a resulted will be excecuted.",
+                "Despite this language bein place 28 for tutorial-searches less than 1% of active users on GitHub are using it."
+
+            ]
         }
         
     ]
