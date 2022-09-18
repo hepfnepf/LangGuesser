@@ -14,10 +14,13 @@ body {
 }
 
 #question {
-    height: 6.1rem;
+    min-height: 6.1rem;
     font-size: 2rem;
 }
 
+#question_counter{
+    
+}
 
 
 #timer{

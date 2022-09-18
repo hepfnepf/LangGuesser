@@ -4,14 +4,16 @@ let validationField = document.getElementById("validation");
 let scoreField = document.getElementById("score");
 let timerField = document.getElementById("timer");
 let ueber = document.getElementsByClassName("ueber")[0];
+let quest_counter = document.getElementById("question_counter")
 
 answerSubmitBtn.addEventListener("click", _on_Submit);
 
 const TIME_PER_QUESTION = 6;
 
 var score = 0;
-var lang_count = 3;//How many lanugages until games is done
-var q_count = 5;//Max. amount of questions asked per language
+const LANG_AMT = 3;//How many lanugages until games is done
+var curr_lang_count = LANG_AMT;
+const QUES_AMT = 5;//Max. amount of questions asked per language
 var curr_q_count = 5;
 var timer = setInterval(timeTick, 1000);
 var sec_left = TIME_PER_QUESTION;
@@ -94,20 +96,29 @@ function initialize(langJSON) {
 }
 
 function nextLanguage(first = false) {
+
+    
     if (!first) {
-        lang_count--;
+        curr_lang_count--;
+        refreshLangCounter();
         languages.splice(languages.indexOf(current_lang),1);
-        if (languages.length == 0 || lang_count<= 0) {
+        if (languages.length == 0 || curr_lang_count<= 0) {
             completed();
             return;
         }
     }
+
+    refreshLangCounter()
     current_lang = languages[getRandomInt(languages.length)];
     curr_q_count =
-        q_count > current_lang.questions.length
+        QUES_AMT > current_lang.questions.length
             ? current_lang.questions.length
-            : q_count;
+            : QUES_AMT;
     nextQuestion(true);
+}
+
+function refreshLangCounter(){
+    quest_counter.innerText = `Question:${curr_lang_count}/${LANG_AMT}`
 }
 
 function nextQuestion(first=false) {
@@ -117,7 +128,7 @@ function nextQuestion(first=false) {
     timer = setInterval(timeTick, 1000);
 
     if (!first){
-        current_lang.questions.pop(current_question);
+        current_lang.questions.splice(current_lang.questions.indexOf(current_question),a);//pop(current_question);
     }
 
     curr_q_count -= 1;
