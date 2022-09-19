@@ -64,7 +64,7 @@ function getRandomInt(max) {
 function completed() {
     console.log("DONE");
     console.log(score)
-    let done_html=`<h1>DONE</h1> <h1>Score: ${score} </h1>`
+    let done_html=`<h1>DONE</h1> <h1>Score: ${score} </h1><button id="restart-btn" onClick="window.location.reload();"><span>Restart</span>  </button>`
     ueber.innerHTML = done_html;
     clearInterval(timer);
 
@@ -128,7 +128,7 @@ function nextQuestion(first=false) {
     timer = setInterval(timeTick, 1000);
 
     if (!first){
-        current_lang.questions.splice(current_lang.questions.indexOf(current_question),a);//pop(current_question);
+        current_lang.questions.splice(current_lang.questions.indexOf(current_question),1);//pop(current_question);
     }
 
     curr_q_count -= 1;
