@@ -73,6 +73,19 @@
                 "Despite this language being place 28 for tutorial-searches less than 1% of active users on GitHub are using it."
 
             ]
+        },
+        {
+            "name":"JavaScript",
+            "alias":["JS"],
+            "questions":[
+                "This websites dynamic content works thans to it.",
+                "This language was developed in just 10 days.",
+                "In this language, jou can but the semicolon at the beginnig of the line instaed of the end.",
+                "You can add strings and numers and get different outputs depending on the order.",
+                "In this language, NaN is a number.",
+                "In this language, you can add a value for \"undefinded\".",
+                "This language is single threaded but has asynchronus behaviour."
+            ]
         }
         
     ]
