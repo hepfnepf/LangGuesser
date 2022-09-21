@@ -5,6 +5,12 @@ body {
     background-color: rgb(67, 13, 67);
 }
 
+footer{
+    position: fixed;
+    bottom: 0px;
+    background-color: black;
+}
+
 .ueber{
     margin-top: 20px;
     background-color: blueviolet;
