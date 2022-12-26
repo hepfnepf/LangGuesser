@@ -118,7 +118,7 @@ function nextLanguage(first = false) {
 }
 
 function refreshLangCounter(){
-    quest_counter.innerText = `Question:${curr_lang_count}/${LANG_AMT}`
+    quest_counter.innerText = `Language:${LANG_AMT-curr_lang_count +1}/${LANG_AMT}`
 }
 
 function nextQuestion(first=false) {
@@ -152,17 +152,4 @@ function timeTick() {
         nextQuestion();
     }
 }
-/*
-class Current{
-    constructor(lang,maxq=5){
-        this.lang = lang
-        this.maxq = maxq
-    }
-
-    nextQ= ()=> {
-        
-    }
-
-}*/
-
 
