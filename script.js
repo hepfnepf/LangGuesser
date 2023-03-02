@@ -96,7 +96,7 @@ function initialize(langJSON) {
 }
 
 function nextLanguage(first = false) {
-
+    answerField.value=""
     
     if (!first) {
         curr_lang_count--;
